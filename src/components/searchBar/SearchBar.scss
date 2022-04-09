@@ -1,0 +1,55 @@
+.container-fluid {
+  background-color: #ffe600;
+  .container-bar {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    margin: 0 0 30px;
+    .icon-meli {
+      width: 60px;
+      background: transparent url("./../../../public/assets/Logo_ML.png")
+        no-repeat center;
+      cursor: pointer;
+      margin-right: 20px;
+    }
+    
+      input[type="search"] {
+        border: none;
+        // background: transparent;
+        width: 65%;
+        margin: 0;
+        padding: 7px 8px;
+        font-size: 14px;
+        color: inherit;
+        border: 1px solid transparent;
+        border-radius: inherit;
+      }
+
+      input[type="search"]::placeholder {
+        color: #bbb;
+      }
+
+      button[type="submit"] {
+        text-indent: -999px;
+        overflow: hidden;
+        width: 40px;
+        padding: 0;
+        margin: 0;
+        border: 1px solid transparent;
+        border-radius: inherit;
+        background: #eeee url("./../../../public/assets/ic_Search.png")
+          no-repeat center;
+        cursor: pointer;
+      }
+
+      button[type="submit"]:hover {
+        opacity: 1;
+      }
+
+      button[type="submit"]:focus,
+      input[type="search"]:focus {
+        outline: none;
+      }
+    
+  }
+}
