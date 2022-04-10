@@ -1,12 +1,12 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import { SearchBar } from "../components/searchBar/SearchBar";
 import { Home } from "../pages/home/Home";
 export const AppRouter = () => {
   return (
     <BrowserRouter>
-      <SearchBar/>
+      <SearchBar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/items" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
