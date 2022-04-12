@@ -1,0 +1,58 @@
+.row-items {
+  .item-borders-radius-top {
+    border-radius: 5px 5px 0px 0px;
+  }
+  .item-borders-radius-bottom {
+    border-radius: 0px 0px 5px 5px;
+  }
+  .col-item {
+    background: #ffff;
+    .item-border-bottom {
+      border-bottom: 1px solid #eeee;
+    }
+    .container-items {
+      padding: 0px;      
+      display: flex;
+      .img-product {
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 16px;
+        width: 180px;
+        height: 180px;
+      }
+      .item-description {
+        font-size: 18px;
+        width: 50%;
+        cursor: pointer;
+        &-price {
+          margin-top: 32px;
+          margin-bottom: 32px;
+          display: block;
+          p {
+            font-size: 24px;
+            margin-bottom: 0px;
+            display: inline-block;
+          }
+        }
+        &-icon-shipping {
+          display: inline-block;
+          margin-left: 10px;
+          width: 18px;
+          height: 18px;
+          outline: none;
+          background: transparent url("./../../../public/assets/ic_shipping.png")
+            no-repeat center;
+        }
+        &-city {
+          align-self: center;
+          margin: 0 auto;
+          font-size: 12px;
+          color: #9999;
+        }
+        cursor: pointer;
+      }
+    }
+  }  
+ 
+  
+}

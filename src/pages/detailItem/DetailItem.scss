@@ -1,0 +1,38 @@
+.item-detail {
+  .container-detail {
+    border-radius: 5px 5px 0px 0px;
+    padding-top: 12px;
+    .item-title {
+      display: inline-block;
+      &-body {
+        display: inline-block;
+        &__condition {
+          font-size: 14px;
+        }
+        &__title {
+          font-size: 24px;
+        }
+        &__price {
+          font-size: 46px;
+        }
+        &__button {
+          width: 90%;
+        }
+      }
+    }
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+    .item-description {
+      margin-top: 32px;
+      margin-left: 32px;
+      p {
+        margin: 32px 0px;
+        font-size: 16px;
+        color: #6666;
+      }
+    }
+  }
+}
