@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import { isEmpty } from "lodash";
 import { useSelector } from "react-redux";
-import "./Item.scss";
+import "./Items.scss";
 import { useNavigate } from "react-router-dom";
 import { formatNumner } from "../../utils/utils";
-export const Item = () => {
+export const Items = () => {
   const [items, setItems] = useState([]);
   const navigate = useNavigate();
   const { data, isLoading } = useSelector((state) => state.products.products);
@@ -21,7 +21,7 @@ export const Item = () => {
   return (
     <div className="container-fluid pb-3">
       <div className="row row-items ">
-        {items?.map((item, index) => (
+        {!isEmpty(items) && items?.map((item, index) => (
           <div
             className={classNames("col-8 offset-2 col-item", {
               "item-borders-radius-top": index === 0,
@@ -56,6 +56,11 @@ export const Item = () => {
             </div>
           </div>
         ))}
+        {isEmpty(items) && (
+          <div className="col-8 offset-2 bg-white p-4 text-center">
+            <h3>Escribe en el buscador lo que quieras encontrar.</h3>
+          </div>
+        )}
       </div>
     </div>
   );

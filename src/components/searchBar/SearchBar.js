@@ -36,7 +36,7 @@ export const SearchBar = () => {
               className="icon-meli"
               aria-label="Mercado Libre"
               src={`${process.env.PUBLIC_URL}/assets/Logo_ML.png`}
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/items")}
             ></img>
             <form onSubmit={handleSearch}>
               <input
