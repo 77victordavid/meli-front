@@ -1,0 +1,20 @@
+.container-breadcrumb {
+  padding-left: 0px !important;
+  .breadcrumb {
+    list-style: none;
+    background-color: #eee;
+  }
+  
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 14px;
+    color: #999;
+  }
+  
+  ul.breadcrumb li+li:before {
+    padding: 5px;
+    font-size: 14px;
+    color: #999;
+    content: ">\00a0";
+  }
+}
