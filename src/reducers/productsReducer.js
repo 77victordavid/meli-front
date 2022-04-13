@@ -49,7 +49,6 @@ export const productsReducer = (state = stateInitial, action) => {
         }
       };
     case types.getDetailItemStart:
-      console.log(state);
       return {
         ...state,
         item: {
@@ -71,6 +70,7 @@ export const productsReducer = (state = stateInitial, action) => {
         }
       };
     case types.getDetailItemFail:
+      console.log('#######: ', action)
       return {
         ...state,
         item: {
@@ -78,7 +78,7 @@ export const productsReducer = (state = stateInitial, action) => {
           isLoading: false,
           isSuccess: false,
           isError: true,
-          data: null
+          data: action.payload.data
         }
       };
     default:

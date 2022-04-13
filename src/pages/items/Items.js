@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import "./Items.scss";
 import { useNavigate } from "react-router-dom";
 import { formatNumner } from "../../utils/utils";
+import { EmptyData } from "../../components/emptyData/EmptyData";
 export const Items = () => {
   const [items, setItems] = useState([]);
   const navigate = useNavigate();
@@ -57,9 +58,7 @@ export const Items = () => {
           </div>
         ))}
         {isEmpty(items) && (
-          <div className="col-8 offset-2 bg-white p-4 text-center">
-            <h3>Escribe en el buscador lo que quieras encontrar.</h3>
-          </div>
+          <EmptyData/>
         )}
       </div>
     </div>

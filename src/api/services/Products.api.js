@@ -1,25 +1,30 @@
-import { getDetailItemFail, getDetailItemStar, getDetailItemSuccess, getProductsFail, getProductsStar, getProductsSuccess } from "../../actions/products.actions";
-import { simpleFetch } from "../../utils/fetch"
+import {
+  getDetailItemFail,
+  getDetailItemStar,
+  getDetailItemSuccess,
+  getProductsFail,
+  getProductsStar,
+  getProductsSuccess,
+} from "../../actions/products.actions";
+import { simpleFetch } from "../../utils/fetch";
 export const getProducts = async (query, dispatch) => {
   dispatch(getProductsStar());
-  try {
-    const api = `/items?q=${query}`
-    const result = await simpleFetch(api);
-    console.log(result)
+  const api = `/items?q=${query}`;
+  const result = await simpleFetch(api);
+  if (result.ok) {
     dispatch(getProductsSuccess(result));
-  } catch (error) {
-    dispatch(getProductsFail(error));
+  } else {
+    dispatch(getProductsFail(result));
   }
-}
+};
 
 export const getDetailItem = async (id, dispatch) => {
   dispatch(getDetailItemStar());
-  try {
-    const api = `/items/${id}`
-    const result = await simpleFetch(api);
-    console.log(result)
+  const api = `/items/${id}`;
+  const result = await simpleFetch(api);
+  if (result.ok) {
     dispatch(getDetailItemSuccess(result));
-  } catch (error) {
-    dispatch(getDetailItemFail(error));
+  } else {
+    dispatch(getDetailItemFail(result));
   }
-}
+};
