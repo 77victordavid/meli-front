@@ -9,7 +9,7 @@ import { EmptyData } from "../../components/emptyData/EmptyData";
 export const Items = () => {
   const [items, setItems] = useState([]);
   const navigate = useNavigate();
-  const { data, isLoading } = useSelector((state) => state.products.products);
+  const { data } = useSelector((state) => state.products.products);
   useEffect(() => {
     if (!isEmpty(data)) {
       setItems(data.items);

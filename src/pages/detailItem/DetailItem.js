@@ -14,7 +14,6 @@ export const DetailItem = () => {
   const { data, isLoading, isError } = useSelector(
     (state) => state.products.item 
   );
-  console.log(data)
   const { item = {} } = data|| {};
   const textCondition = item.condition === "new" ? "Nuevo" : "Usado";
   useEffect(() => {

@@ -70,7 +70,6 @@ export const productsReducer = (state = stateInitial, action) => {
         }
       };
     case types.getDetailItemFail:
-      console.log('#######: ', action)
       return {
         ...state,
         item: {
